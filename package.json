@@ -1,0 +1,49 @@
+{
+  "name": "creative-intelligence-os",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Creative Intelligence OS — standalone ecommerce creative performance decision system.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "demo:generate": "tsx scripts/generate-demo.ts",
+    "fixture:1000": "tsx scripts/generate-demo.ts --fixture1000",
+    "seed:demo": "tsx --conditions=react-server scripts/seed-demo.ts",
+    "loadtest": "tsx --conditions=react-server scripts/loadtest.ts",
+    "vercel-build": "tsx scripts/migrate.ts && next build"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.45.4",
+    "fflate": "^0.8.3",
+    "next": "^16.4.3",
+    "pg": "^8.23.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "recharts": "^2.15.4",
+    "server-only": "^0.0.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.0",
+    "@types/pg": "^8.15.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "autoprefixer": "^10.4.21",
+    "drizzle-kit": "^0.31.11",
+    "exceljs": "^4.4.0",
+    "postcss": "^8.5.31",
+    "tailwindcss": "^3.4.19",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.5"
+  }
+}
